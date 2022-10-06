@@ -64,7 +64,7 @@ if [[ -d "$NVIM_CONFIG_DIR" ]]; then
     $root mv "$NVIM_CONFIG_DIR" "$NVIM_CONFIG_DIR.backup"
 fi
 
-$root git clone --depth=1 https://github.com/jdhao/nvim-config.git "$NVIM_CONFIG_DIR"
+$root git clone --depth=1 https://github.com/ambientxd/nvim-config.git "$NVIM_CONFIG_DIR"
 
 echo "Installing packer.nvim"
 if [[ ! -d ~/.local/share/nvim/site/pack/packer/opt/packer.nvim ]]; then
