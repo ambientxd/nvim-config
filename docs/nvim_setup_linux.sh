@@ -9,8 +9,8 @@ elif [ -f /usr/bin/sudo ]; then
     root=/usr/bin/sudo
 fi
 # Checking installed OS (to use package manager)
-case $(awk -F= '$1 ~ /ID|VERSION_ID/ {print $2;}' /etc/os-release)
-    arch)
+case $(awk -F= '$1 ~ /ID|VERSION_ID/ {print $2;}' /etc/os-release) in
+    arch*)
         $root -Syy
         pkgmgr='pacman -S'
         
