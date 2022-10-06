@@ -4,8 +4,10 @@ set -o pipefail
 
 # Checking if either OpenDoas or Sudo is installed.
 if [ -f /usr/bin/doas ]; then
-    root=$(/usr/bin/doas)
+    root=/usr/bin/doas
 elif [ -f /usr/bin/sudo ]; then
+    root=/usr/bin/sudo
+fi
 # Checking installed OS (to use package manager)
 case $(awk -F= '$1 ~ /ID|VERSION_ID/ {print $2;}' /etc/os-release)
     arch)
